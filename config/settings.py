@@ -124,15 +124,10 @@ USE_TZ = True
 # CKeditor Config
 CKEDITOR_CONFIGS = {
     'default': {
-        'toolbar': 'Custom',
-        'toolbar_Custom': [
-            ['Bold', 'Italic', 'Underline'],
-            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
-            ['Link', 'Unlink'],
-            ['RemoveFormat', 'Source']
-        ]
+        'toolbar': 'Full',
     }
 }
+CKEDITOR_UPLOAD_PATH = "uploads/"
 CKEDITOR_RESTRICT_BY_USER = True
 
 
@@ -146,7 +141,6 @@ STATICFILES_STORAGE ='whitenoise.storage.CompressedManifestStaticFilesStorage' #
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = str(BASE_DIR.joinpath('media'))
-CKEDITOR_UPLOAD_PATH = "uploads/"
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
 
